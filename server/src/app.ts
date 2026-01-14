@@ -111,7 +111,7 @@ export const handleAppForClient = (app: ReturnType<typeof express>, io: Server, 
     const stroke = updateDrawStroke(userId, { x, y });
     
     if (stroke) {
-      emitToAllButSender(CLIENT_TO_SERVER_EVENTS_NAMES.DRAW_MOVE, {
+      emitToAllButSender(SERVER_TO_CLIENT_EVENTS_NAMES.DRAW_MOVE, {
         userId: stroke.userId,
         points: [{ x, y }]
       });
@@ -137,7 +137,7 @@ export const handleAppForClient = (app: ReturnType<typeof express>, io: Server, 
 
     clearAllStrokes();
     
-    emitToAllButSender(SERVER_TO_CLIENT_EVENTS_NAMES.DRAW_CLEAR, {});
+    emitToAll(SERVER_TO_CLIENT_EVENTS_NAMES.DRAW_CLEAR, {});
   });
 
   app.get(ENDPOINTS.GET_USERS, (req, res) => {

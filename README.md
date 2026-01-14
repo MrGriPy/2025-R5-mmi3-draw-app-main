@@ -69,6 +69,27 @@ npm run dev
 ```
 > Client now runs on http://localhost:5173 (or any port you defined in your .env)
 
+## ✨ New Features
+
+### Export Functionality
+The drawing app now supports exporting your creations in multiple formats:
+
+- **PNG Export**: High-quality raster image with transparency
+- **SVG Export**: Scalable vector graphics, perfect for drawings
+- **PDF Export**: Portable document format, ideal for printing
+
+**How to use:**
+1. Draw on the canvas as usual
+2. Click on the export buttons in the toolbar (PNG, SVG, PDF)
+3. Your file will automatically download
+
+**Technical details:**
+- All exports include a clean white background
+- Files are automatically named with timestamps
+- High-resolution output for professional use
+
+For detailed documentation, see [EXPORT_FEATURE_README.md](EXPORT_FEATURE_README.md).
+
 ## Development Commands
 
 ### Server Commands

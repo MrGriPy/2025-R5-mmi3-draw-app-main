@@ -23,7 +23,7 @@ function DrawPage() {
           {/* <Instructions>
             {getInstructions('user-list')}
           </Instructions> */}
-          {/* <UserList users={userList} /> */}
+          <UserList users={userList} />
         </>
       }
       bottomArea={
@@ -34,12 +34,13 @@ function DrawPage() {
         </>
       }
     >
-      {/* <DrawArea /> */}
-      {/* <TestDrawArea /> */}
-      <Instructions className="max-w-xs">
-        {getInstructions('draw-area')}
-      </Instructions>
-      
+      <>
+        <DrawArea />
+        {/* <TestDrawArea /> */}
+        <Instructions className="max-w-xs">
+          {getInstructions('draw-area')}
+        </Instructions>
+      </>
     </DrawLayout>
   )
 }

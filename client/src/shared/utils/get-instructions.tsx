@@ -78,6 +78,55 @@ export const getInstructions = (type: string) => {
           </ul>
         </>
       );
+    case 'layers':
+      return (
+        <>
+          Système de calques avancé : <br />
+          <ul>
+            <li>
+              Créer un store Zustand <code>useLayersStore</code> pour gérer les calques
+            </li>
+            <li>
+              Chaque calque contient : id, nom, visibilité, opacité, ordre, et liste de traits
+            </li>
+            <li>
+              Créer le composant <code>LayerPanel</code> pour gérer l'interface des calques
+            </li>
+            <li>
+              Permettre d'ajouter, supprimer, réorganiser et modifier les calques
+            </li>
+            <li>
+              Modifier <code>DrawAreaWithLayers</code> pour dessiner sur le calque actif
+            </li>
+            <li>
+              Synchroniser les calques entre tous les utilisateurs via Socket.IO
+            </li>
+          </ul>
+        </>
+      );
+    case 'export':
+      return (
+        <>
+          Fonctionnalités d'export : <br />
+          <ul>
+            <li>
+              Créer le composant <code>ExportButton</code> avec boutons PNG, SVG, PDF
+            </li>
+            <li>
+              Utiliser <code>canvas.toDataURL()</code> pour l'export PNG
+            </li>
+            <li>
+              Convertir le canvas en SVG avec une image raster intégrée
+            </li>
+            <li>
+              Utiliser la bibliothèque jsPDF pour l'export PDF
+            </li>
+            <li>
+              Gérer le téléchargement automatique des fichiers
+            </li>
+          </ul>
+        </>
+      );
     default:
       return <></>
   }
